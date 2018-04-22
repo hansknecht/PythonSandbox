@@ -4,13 +4,15 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>33cc3e1e-80ed-4c55-9c16-8da3f5421456</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>PythonSandbox.py</StartupFile>
+    <StartupFile>exceptional.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>PythonSandbox</Name>
     <RootNamespace>PythonSandbox</RootNamespace>
+    <IsWindowsApplication>True</IsWindowsApplication>
+    <InterpreterId>Global|PythonCore|3.6</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +23,21 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="PythonSandbox.py" />
+    <Compile Include="exceptional.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="exceptional_test.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sqlroot.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sqr_root_test.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.6" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
