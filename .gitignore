@@ -286,6 +286,7 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
+secrets.py
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -346,6 +347,7 @@ celerybeat-schedule
 # Environments
 .env
 .venv
+*env/
 env/
 venv/
 ENV/
@@ -364,3 +366,5 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+*.swp
